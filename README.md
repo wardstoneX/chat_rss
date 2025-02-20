@@ -1,5 +1,7 @@
 <h2 align="center"><a href="https://arxiv.org/abs/2405.14062" style="color:#903168">
 
+## RSS section
+
 Please follow the installation method of chatscene as described below,
 but use the carla here. We provide a compiled carla with python3.8 that has rss linked to the client library.
 its available under this link:
@@ -7,7 +9,11 @@ https://drive.google.com/file/d/1qyqUTzqeMzrk0ankwXVgzafWSgabm1Im/view?usp=shari
 
 rss sensor is defined in the folder rss/rss_sensor. We output the rss values onto a csv file for ease of postprocessing.
 
+We added the rss sensor into carlaEnv for stable results. 
+However, if users want to add it into the Scenic, they can attac the sensor similarly onto the ego vehicle.
 
+The outputted csv files can be processes in python afterwards, or users can choose to do what they want with it in code. 
+But user should be aware of sensor synchronisation.
 
 
 
