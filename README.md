@@ -13,7 +13,7 @@ We added the rss sensor into carlaEnv for stable results.
 However, if users want to add it into the Scenic, they can attach the sensor similarly onto the ego vehicle.
 
 The outputted csv files can be processed in python afterwards, or users can choose to do what they want with it in code. 
-But user should be aware of sensor synchronisation.
+But user should be aware of sensor synchronisation and how to process the data smart.
 
 Also use these commands for the path setting:
 
