@@ -1,4 +1,24 @@
 <h2 align="center"><a href="https://arxiv.org/abs/2405.14062" style="color:#903168">
+
+Please follow the installation method of chatscene as described below,
+but use the carla here. We provide a compiled carla with python3.8 that has rss linked to the client library.
+its available under this link:
+https://drive.google.com/file/d/1qyqUTzqeMzrk0ankwXVgzafWSgabm1Im/view?usp=sharing
+
+rss sensor is defined in the folder rss/rss_sensor. We output the rss values onto a csv file for ease of postprocessing.
+
+
+
+
+
+
+
+
+
+
+
+
+
 [CVPR2024] ChatScene: Knowledge-Enabled Safety-Critical Scenario Generation for Autonomous Vehicles</a></h3>
 
 ## Installation

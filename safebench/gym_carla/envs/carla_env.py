@@ -11,6 +11,25 @@ Description:
     For a copy, see <https://opensource.org/licenses/MIT>
 '''
 
+
+###
+
+import sys
+import os
+
+# path to the rss directory, fix it if it differs
+rss_path = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), 
+    	'../../../rss')
+)
+
+sys.path.append(rss_path)
+
+# Import rss_sensor
+from rss_sensor import RssSensor
+
+
+###
 import random
 
 import numpy as np
@@ -56,6 +75,7 @@ class CarlaEnv(gym.Env):
         self.ego_vehicle = None
         self.auto_ego = env_params['auto_ego']
 
+        self.rss_sensor = None
         self.collision_sensor = None
         self.lidar_sensor = None
         self.camera_sensor = None
@@ -284,6 +304,9 @@ class CarlaEnv(gym.Env):
             array = array[:, :, :3]
             array = array[:, :, ::-1]
             self.camera_img = array
+        self.rss_sensor = RssSensor(self.ego_vehicle, self.world,
+                                    None, None, None)
+    
 
     def step_before_tick(self, ego_action, scenario_action):
         if self.world:
@@ -588,6 +611,8 @@ class CarlaEnv(gym.Env):
             self.camera_sensor.stop()
             self.camera_sensor.destroy()
             self.camera_sensor = None
+        if self.rss_sensor is not None:
+            self.rss_sensor.destroy()
 
     def _remove_ego(self):
         # TODO: ego can be reused.
