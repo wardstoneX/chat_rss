@@ -10,9 +10,9 @@ its available under this link [CARLA_0.9.15_RSS](https://drive.google.com/file/d
 rss sensor is defined in the folder rss/rss_sensor. We output the rss values onto a csv file for ease of postprocessing.
 
 We added the rss sensor into carlaEnv for stable results. 
-However, if users want to add it into the Scenic, they can attac the sensor similarly onto the ego vehicle.
+However, if users want to add it into the Scenic, they can attach the sensor similarly onto the ego vehicle.
 
-The outputted csv files can be processes in python afterwards, or users can choose to do what they want with it in code. 
+The outputted csv files can be processed in python afterwards, or users can choose to do what they want with it in code. 
 But user should be aware of sensor synchronisation.
 
 Also use these commands for the path setting:
