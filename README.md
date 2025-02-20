@@ -4,8 +4,8 @@
 
 Please follow the installation method of chatscene as described below,
 but use the carla here. We provide a compiled carla with python3.8 that has rss linked to the client library.
-its available under this link:
-https://drive.google.com/file/d/1qyqUTzqeMzrk0ankwXVgzafWSgabm1Im/view?usp=sharing
+its available under this link [CARLA_0.9.15_RSS](https://drive.google.com/file/d/1qyqUTzqeMzrk0ankwXVgzafWSgabm1Im/view?usp=sharing) and extract it to your folder.
+
 
 rss sensor is defined in the folder rss/rss_sensor. We output the rss values onto a csv file for ease of postprocessing.
 
@@ -15,8 +15,15 @@ However, if users want to add it into the Scenic, they can attac the sensor simi
 The outputted csv files can be processes in python afterwards, or users can choose to do what they want with it in code. 
 But user should be aware of sensor synchronisation.
 
+Also use these commands for the path setting:
 
-
+```
+export CARLA_ROOT=path/to/CARLA_Shipping_0.9.15-dev-8-g9f27de1d9-dirty/LinuxNoEditor
+export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.15-py3.8-linux-x86_64.egg
+export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/agents
+export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
+export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI
+```
 
 
 
