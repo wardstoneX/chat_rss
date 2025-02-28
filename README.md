@@ -36,6 +36,10 @@ export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI
 
 ```
+### Proccessing the data
+The csv files can be processed with python similar to the methods in processing folder.
+
+Also be aware of the sensor delay. RSS sensor is sometimes behind in processing the actual situation. It has to be due to the way it is implemented, possibly. I expect it could be as late as 5 seconds, please verify yourself.
 
 
 
