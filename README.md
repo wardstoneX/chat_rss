@@ -20,7 +20,7 @@ After downloading, extract it to your working directory.
 - The **RSS sensor** is located in the `rss/rss_sensor` folder.
 - The **RSS values** are output to a CSV file for easy post-processing. 
 
-We have integrated the RSS sensor into the **CARLA environment** CarlaEnv within Safebench for stable results. However, if users want to add the sensor to **Scenic**, they can attach it to the **ego vehicle** similarly within Similator.py file under Carla subdirectory.
+We have integrated the RSS sensor into the **CARLA environment** CarlaEnv within Safebench for stable results. However, if users want to add the sensor to **Scenic**, they can attach it to the **ego vehicle** similarly within Simulator.py file under Carla subdirectory.
 
 The outputted CSV files can be processed later using Python. Users can also choose how they wish to handle this data, but they should be mindful of **sensor synchronization**,**data synchronization**, **multithreading** and how to process the data efficiently.
 
