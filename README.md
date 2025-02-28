@@ -1,34 +1,41 @@
 <h2 align="center"><a href="https://arxiv.org/abs/2405.14062" style="color:#903168">
 
-## RSS section
+# [CVPR2024] ChatScene: Knowledge-Enabled Safety-Critical Scenario Generation for Autonomous Vehicles
 
-Please follow the installation method of chatscene as described below,
-but use the carla here. We provide a compiled carla with python3.8 that has rss linked to the client library.
-its available under this link [CARLA_0.9.15_RSS](https://drive.google.com/file/d/1qyqUTzqeMzrk0ankwXVgzafWSgabm1Im/view?usp=sharing) and extract it to your folder.
+[**View the paper on arXiv**](https://arxiv.org/abs/2405.14062)
 
+---
 
-rss sensor is defined in the folder rss/rss_sensor. We output the rss values onto a csv file for ease of postprocessing.
+## RSS Section
 
-We added the rss sensor into carlaEnv for stable results. 
-However, if users want to add it into the Scenic, they can attach the sensor similarly onto the ego vehicle.
+Please follow the installation method of **ChatScene** as described below, but use **CARLA** instead. We provide a pre-compiled version of **CARLA** with Python 3.8, which includes the **RSS** linked to the client library. Users have to use our Carla version, since RSS has to be linked during compile time.
 
-The outputted csv files can be processed in python afterwards, or users can choose to do what they want with it in code. 
-But user should be aware of sensor synchronisation and how to process the data smart.
+You can download the pre-compiled **CARLA** here:  
+[CARLA_0.9.15_RSS](https://drive.google.com/file/d/1qyqUTzqeMzrk0ankwXVgzafWSgabm1Im/view?usp=sharing)
 
-Also use these commands for the path setting:
+After downloading, extract it to your working directory.
 
-```
+### RSS Sensor Setup
+
+- The **RSS sensor** is located in the `rss/rss_sensor` folder.
+- The **RSS values** are output to a CSV file for easy post-processing. 
+
+We have integrated the RSS sensor into the **CARLA environment** CarlaEnv within Safebench for stable results. However, if users want to add the sensor to **Scenic**, they can attach it to the **ego vehicle** similarly within Similator.py file under Carla subdirectory.
+
+The outputted CSV files can be processed later using Python. Users can also choose how they wish to handle this data, but they should be mindful of **sensor synchronization**,**data synchronization**, **multithreading** and how to process the data efficiently.
+
+### Path Setup
+
+To set up the paths, use the following commands:
+
+```bash
 export CARLA_ROOT=path/to/CARLA_Shipping_0.9.15-dev-8-g9f27de1d9-dirty/LinuxNoEditor
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/dist/carla-0.9.15-py3.8-linux-x86_64.egg
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla/agents
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI/carla
 export PYTHONPATH=$PYTHONPATH:${CARLA_ROOT}/PythonAPI
+
 ```
-
-
-
-
-
 
 
 
